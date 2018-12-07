@@ -70,7 +70,7 @@ element. -->
 <!-- and filters. They may also reference (or include) other appenders. -->
 <!ELEMENT appender (errorHandler?, param*,
       rollingPolicy?, triggeringPolicy?, connectionSource?,
-      layout?, filter*, appender-ref*)>
+      layout?, filter*, rewritePolicy?, appender-ref*)>
 <!ATTLIST appender
   name 		CDATA 	#REQUIRED
   class 	CDATA	#REQUIRED
@@ -149,6 +149,11 @@ element. -->
 <!ELEMENT loggerFactory (param*)>
 <!ATTLIST loggerFactory
    class        CDATA #REQUIRED>
+
+<!ELEMENT rewritePolicy EMPTY>
+<!ATTLIST rewritePolicy
+  class CDATA #REQUIRED
+>
 
 <!ELEMENT appender-ref EMPTY>
 <!ATTLIST appender-ref
